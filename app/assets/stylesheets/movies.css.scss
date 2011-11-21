@@ -1,3 +1,83 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$border_color : #D4D42C;
+$title_color: #98BF21;
+$odd_color: #eaf2d3;
+
+#movies {
+	
+	border:1px solid $border_color;
+	border-collapse:collapse;
+	
+	th, tr, td {
+		border:1px solid $border_color;
+	}
+	
+	td {
+		padding: 5px 5px;
+	}
+	
+	.action {
+		padding: 0px 10px;
+	}
+	
+	.even { background-color:white;}
+	.odd  { background-color:$odd_color; }
+	
+	th {
+		background-color:$title_color;
+		color:white;
+	}
+	
+}
+
+.button { 
+  /*START:non-matching*/
+  font-weight: bold;
+  background-color: #FFF089;
+  text-transform: uppercase;
+  font-family: verdana;
+  border: 1px solid #282727;
+  /*END:non-matching*/
+  /*START:basic*/
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 6px 20px;
+  /*END:basic*/
+  /*START:consistency*/
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  /*END:consistency*/
+  /*START:rounded*/
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+
+  box-shadow: 1px 3px 5px #555;
+  -moz-box-shadow: 1px 3px 5px #555;
+  -webkit-box-shadow: 1px 3px 5px #555;
+  /*END:rounded*/
+  /*START:gradient*/
+  background: -webkit-gradient(linear, 0 0, 0 100%,
+    from(#FFF089), to(#A69520));
+  background: -moz-linear-gradient(#FFF089, #A69520);
+  background: -o-linear-gradient(#FFF089, #A69520);
+  background: linear-gradient(top center, #FFF089, #A69520);
+  /*END:gradient*/
+}
+
+/*START:click*/
+.button:active, .button:focus {
+  color: #000;
+  background: -webkit-gradient(linear, 0 0, 100% 0,
+    from(#A69520), to(#FFF089));
+  background: -moz-linear-gradient(#A69520, #FFF089);
+  background: -o-linear-gradient(#A69520, #FFF089);
+  background: linear-gradient(left center, #A69520, #FFF089);
+
+}
+/*END:click*/
+
